@@ -21,6 +21,6 @@ module.exports = {
         }
         let mode = client.distube.setRepeatMode(interaction)
         mode = mode ? mode === 2 ? "Repeat queue" : "Repeat song" : "Off"
-        return interaction.reply("Set repeat mode to `" + mode + "`")
+        return interaction.reply("Đã chuyển chế độ lặp thành `" + mode + "`")
     }
 }
