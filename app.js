@@ -162,8 +162,8 @@ client.distube
     })
     .on("addSong", (queue, song) => {
         const embed = new MessageEmbed()
-            .setTitle(":ballot_box_with_check: | Added song to queue")
-            .setDescription(`\`${song.name}\` - \`${song.formattedDuration}\` - Requested by ${song.user}`)
+            .setTitle(":ballot_box_with_check: | Đã thêm bài hát vào danh sách")
+            .setDescription(`\`${song.name}\` - \`${song.formattedDuration}\` - Yêu cầu bởi ${song.user}`)
             .setColor("RANDOM")
             .setTimestamp()
         queue.textChannel.send({ embeds: [embed] })
@@ -178,27 +178,27 @@ client.distube
     })
     .on("error", (textChannel, e) => {
         console.error(e)
-        textChannel.send(`An error encountered: ${e}`)
+        textChannel.send(`Có một lỗi nào đó đã phát sinh!: ${e}`)
     })
-    // .on("finish", queue => queue.textChannel.send("***No more song in queue. Leaving the channel***"))
+    // .on("finish", queue => queue.textChannel.send("***Không còn bài nào trong danh sách. Rời khỏi kênh!***"))
     .on("finishSong", queue => {
         const embed = new MessageEmbed()
-            .setDescription(`:white_check_mark: | Finished playing \`${queue.songs[0].name}\``)
+            .setDescription(`:white_check_mark: | Đã phát xong \`${queue.songs[0].name}\``)
         queue.textChannel.send({ embeds: [embed] })
     })
     .on("disconnect", queue => {
         const embed = new MessageEmbed()
-            .setDescription(":x: | Disconnected from voice channel")
+            .setDescription(":x: | Đã rời khỏi kênh thoại")
         queue.textChannel.send({ embeds: [embed] })
     })
     .on("empty", queue => {
         const embed = new MessageEmbed()
-            .setDescription(":x: | Channel is empty. Leaving the channel!")
+            .setDescription(":x: | Kênh đang trống. Rời khỏi kênh!")
         queue.textChannel.send({ embeds: [embed] })
     })
     .on("initQueue", (queue) => {
         queue.autoplay = false
-        queue.volume = 50
+        queue.volume = 75
     })
 keepalive()
 if (!process.env.token) {
