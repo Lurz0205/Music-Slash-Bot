@@ -17,7 +17,7 @@ module.exports = {
         const queue = await client.distube.getQueue(interaction)
         const voiceChannel = interaction.member.voice.channel
         if (!voiceChannel) {
-            return interaction.reply({ content: "Please join a voice channel!", ephemeral: true })
+            return interaction.reply({ content: "Cậu hãy tham gia vào một kênh thoại đã chứ!", ephemeral: true })
         }
         if (!queue) {
             const queueError = new Discord.MessageEmbed()
@@ -26,7 +26,7 @@ module.exports = {
             return interaction.reply({ embeds: [queueError] })
         }
         if (interaction.member.guild.me.voice.channelId !== interaction.member.voice.channelId) {
-            return interaction.reply({ content: "You are not on the same voice channel as me!", ephemeral: true })
+            return interaction.reply({ content: "Cậu không ở trong cùng một kênh thoại với tớ mà!", ephemeral: true })
         }
         try {
             await client.distube.jump(interaction, parseInt(musicid))
