@@ -21,7 +21,7 @@ module.exports = {
         }
         try {
             await client.distube.resume(interaction)
-            await interaction.reply("***Resumed the current track***")
+            await interaction.reply("***Tiếp tục phát nào!***")
             const message = await interaction.fetchReply()
             await message.react("▶")
         } catch {
