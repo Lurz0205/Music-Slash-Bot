@@ -8,7 +8,7 @@ module.exports = {
         const queue = await client.distube.getQueue(interaction)
         const voiceChannel = interaction.member.voice.channel
         if (!voiceChannel) {
-            return interaction.reply({ content: "Cậu hãy tham gia vào một kênh thoại đã chứ!", ephemeral: true })
+            return interaction.reply({ content: "Cậu phải tham gia vào một kênh thoại đã chứ!", ephemeral: true })
         }
         if (!queue) {
             const queueError = new Discord.MessageEmbed()
