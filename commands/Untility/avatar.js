@@ -2,11 +2,11 @@ const Discord = require("discord.js")
 
 module.exports = {
     name: "avatar",
-    description: "Get avatar user",
+    description: "Lấy avatar của người nào đó",
     options: [
         {
             name: "user",
-            description: "Get avatar user",
+            description: "Ai đây ai đây",
             type: 6
         }
     ],
