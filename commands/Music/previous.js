@@ -21,7 +21,7 @@ module.exports = {
         }
         try {
             await client.distube.previous(interaction)
-            await interaction.reply("***Previous song***")
+            await interaction.reply("***Muốn phát lại bài trước đó hử.. Được rùi cậu thích thì tớ chiều ^^***")
             const message = await interaction.fetchReply()
             await message.react("⏮")
         } catch {
