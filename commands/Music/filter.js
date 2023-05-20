@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 
 module.exports = {
     name: "filter",
-    description: "Changes the audio Filter",
+    description: "Thêm Filter cho âm thanh",
     options: [
         {
             name: "filter-name",
@@ -79,7 +79,7 @@ module.exports = {
         const choose = interaction.options.getString("filter-name")
         const voiceChannel = interaction.member.voice.channel
         if (!voiceChannel) {
-            return interaction.reply({ content: "Please join a voice channel!", ephemeral: true })
+            return interaction.reply({ content: "Hãy tham gia vào một kênh thoại!", ephemeral: true })
         }
         if (!queue) {
             const queueError = new Discord.MessageEmbed()
