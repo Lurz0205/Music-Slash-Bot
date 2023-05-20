@@ -7,7 +7,7 @@ module.exports = {
         {
             name: "filter-name",
             type: 3,
-            description: "The filter's name | Choose again to turn off the filter",
+            description: "Tên filter | Chọn filter một lần nữa để tắt nó nhé!",
             required: true,
             choices: [
                 {
@@ -88,7 +88,7 @@ module.exports = {
             return interaction.reply({ embeds: [queueError] })
         }
         if (interaction.member.guild.me.voice.channelId !== interaction.member.voice.channelId) {
-            return interaction.reply({ content: "Cậu không ở trong cùng kênh thoại với tớ mà!", ephemeral: true })
+            return interaction.reply({ content: "Cậu đang không ở cùng kênh thoại với tớ mà!", ephemeral: true })
         }
         await client.distube.setFilter(interaction, choose)
         const filterembed = new Discord.MessageEmbed()
