@@ -1,6 +1,6 @@
 module.exports = {
     name: "play",
-    description: "Chơi nhạc",
+    description: "Phát nhạc.",
     options: [
         {
             name: "query",
@@ -23,7 +23,7 @@ module.exports = {
             }
         }
         await interaction.reply("🔍 **Để tớ tìm xem...**")
-        await interaction.editReply("Tìm kiếm thành công rùi nè! :ok_hand: ")
+        await interaction.editReply("A! Tớ đã tìm thấy bài hát cậu yêu cầu rồi! :ok_hand: ")
         client.distube.play(voiceChannel, query, {
             textChannel: interaction.channel,
             member: interaction.member
