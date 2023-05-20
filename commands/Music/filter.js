@@ -79,7 +79,7 @@ module.exports = {
         const choose = interaction.options.getString("filter-name")
         const voiceChannel = interaction.member.voice.channel
         if (!voiceChannel) {
-            return interaction.reply({ content: "Hãy tham gia vào một kênh thoại!", ephemeral: true })
+            return interaction.reply({ content: "Cậu hãy tham gia vào một kênh thoại trước đã!", ephemeral: true })
         }
         if (!queue) {
             const queueError = new Discord.MessageEmbed()
@@ -88,7 +88,7 @@ module.exports = {
             return interaction.reply({ embeds: [queueError] })
         }
         if (interaction.member.guild.me.voice.channelId !== interaction.member.voice.channelId) {
-            return interaction.reply({ content: "You are not on the same voice channel as me!", ephemeral: true })
+            return interaction.reply({ content: "Cậu không ở trong cùng kênh thoại với tớ mà!", ephemeral: true })
         }
         await client.distube.setFilter(interaction, choose)
         const filterembed = new Discord.MessageEmbed()
