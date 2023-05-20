@@ -1,6 +1,6 @@
 module.exports = {
     name: "play",
-    description: "Playing music",
+    description: "Chơi nhạc",
     options: [
         {
             name: "query",
@@ -15,7 +15,7 @@ module.exports = {
         const queue = await client.distube.getQueue(interaction)
         const query = interaction.options.get("query").value
         if (!voiceChannel) {
-            return interaction.reply({ content: "Hãy tham gia vào một kênh thoại đã nha!", ephemeral: true })
+            return interaction.reply({ content: "Cậu phải tham gia vào một kênh thoại đã!", ephemeral: true })
         }
         if (queue) {
             if (interaction.member.guild.me.voice.channelId !== interaction.member.voice.channelId) {
