@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 
 module.exports = {
     name: "previous",
-    description: "Play the previous song!",
+    description: "Phát bản nhạc trước đó!",
     timeout: 5000,
     run: async (interaction, client) => {
         const queue = await client.distube.getQueue(interaction)
