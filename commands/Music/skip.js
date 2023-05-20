@@ -21,7 +21,7 @@ module.exports = {
         }
         try {
             await client.distube.skip(interaction)
-            await interaction.reply("***Skipped***")
+            await interaction.reply("***Đã bỏ qua***")
             const message = await interaction.fetchReply()
             await message.react("⏭")
         } catch {
