@@ -20,7 +20,7 @@ module.exports = {
             return interaction.reply({ content: "Cậu đang không ở cùng kênh thoại với tớ mà!", ephemeral: true })
         }
         await client.distube.stop(interaction)
-        await interaction.reply("***Music stopped***")
+        await interaction.reply("***Tớ dừng phát rùi nha***")
         const message = await interaction.fetchReply()
         await message.react("⏹")
     }
