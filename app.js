@@ -152,7 +152,7 @@ client.distube
             .addField("**Like:**", song.likes.toString(), true)
             .addField("**Duration:**", song.formattedDuration.toString(), true)
             .addField("**Status**", status(queue).toString())
-            .setFooter({ text: `Requested by ${song.user.username}`, iconURL: song.user.avatarURL() })
+            .setFooter({ text: `Yêu cầu bởi ${song.user.username}`, iconURL: song.user.avatarURL() })
             .setTimestamp()
         queue.textChannel.send({ embeds: [embed] })
     })
@@ -174,7 +174,7 @@ client.distube
     })
     .on("error", (textChannel, e) => {
         console.error(e)
-        textChannel.send(`Có một lỗi nào đó đã phát sinh!: ${e}`)
+        textChannel.send(`Ôi không! tớ gặp lỗi rồi!: ${e}`)
     })
     // .on("finish", queue => queue.textChannel.send("***Không còn bài nào trong danh sách. Rời khỏi kênh!***"))
     .on("finishSong", queue => {
@@ -189,7 +189,7 @@ client.distube
     })
     .on("empty", queue => {
         const embed = new MessageEmbed()
-            .setDescription(":x: | Kênh đang trống. Rời khỏi kênh!")
+            .setDescription(":x: | Kênh không có ai cả! Tớ rời nha!")
         queue.textChannel.send({ embeds: [embed] })
     })
     .on("initQueue", (queue) => {
