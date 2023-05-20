@@ -25,7 +25,7 @@ module.exports = {
             const message = await interaction.fetchReply()
             await message.react("⏮")
         } catch {
-            interaction.reply({ content: " There is no previous song in this queue", ephemeral: true })
+            interaction.reply({ content: " Cái cậu này! Làm gì có bản nhạc nào trước kia đâu ", ephemeral: true })
         }
     }
 }
