@@ -23,7 +23,7 @@ module.exports = {
             }
         }
         await interaction.reply("🔍 **Để tớ tìm xem...**")
-        await interaction.editReply("A! Tớ đã tìm thấy bài hát cậu yêu cầu rồi! :ok_hand: ")
+        await interaction.editReply("**A! Tớ đã tìm thấy bài hát cậu yêu cầu rồi!** :heart: ")
         client.distube.play(voiceChannel, query, {
             textChannel: interaction.channel,
             member: interaction.member
