@@ -194,7 +194,7 @@ client.distube
     })
     .on("initQueue", (queue) => {
         queue.autoplay = false
-        queue.volume = 75
+        queue.volume = 100
     })
 keepalive()
 if (!process.env.token) {
